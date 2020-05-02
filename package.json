@@ -1,0 +1,28 @@
+{
+  "name": "crm-beta",
+  "version": "1.0.0",
+  "description": "app for analytics",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "server": "nodemon index"
+  },
+  "keywords": [
+    "ads",
+    "social",
+    "network",
+    "marketing"
+  ],
+  "author": "Viktor M <advert31337@yandex.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.11",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
