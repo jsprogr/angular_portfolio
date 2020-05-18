@@ -8,7 +8,7 @@
     "server": "nodemon index",
     "client-i": "npm install --prefix client",
     "client": "npm run start --prefix client",
-    "dev": "concurrently  \"npm run server\" \"npm run client\" "
+    "dev": "concurrently  \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "ads",

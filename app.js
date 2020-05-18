@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParcer = require('body-parser')
 const passport = require('passport')
+
 const authRoutes = require('./routes/auth')
 const categoryRoutes = require('./routes/category')
 const orderRoutes = require('./routes/order')
@@ -21,12 +22,13 @@ mongoose.connect(keys.mongoURI,   {
   .then(() => console.log('MongoDB connected.'))
   .catch((err) => console.log(err))
 
+// libs
 app.use(passport.initialize())
 require('./middleware/passport')(passport)
 
-// libs
 app.use(require('morgan')('dev'))
 app.use('/uploads', express.static('uploads'))
+// парсер тела пост запроса
 app.use(bodyParcer.urlencoded({extended: true}))
 app.use(bodyParcer.json())
 app.use(require('cors')())
@@ -40,4 +42,3 @@ app.use('/api/analytics', analyticsRoutes)
 
 module.exports = app
 
-//mongodb+srv://mdb:111@cluster0-6nshx.mongodb.net/test?retryWrites=true&w=majority

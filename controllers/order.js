@@ -25,7 +25,6 @@ module.exports.getAll = async function(req, res) {
     query.order = +req.query.order
   }
 
-
   try {
     const orders = await Order
       .find(query)
