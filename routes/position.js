@@ -6,6 +6,6 @@ const router = express.Router()
 router.get('/:categoryId', passport.authenticate('jwt', {session: false}), controller.getByCategoryId)
 router.post('/', passport.authenticate('jwt', {session: false}), controller.create)
 router.delete('/:id', passport.authenticate('jwt', {session: false}), controller.remove)
-router.post('/:id', passport.authenticate('jwt', {session: false}), controller.update)
+router.patch('/:id', passport.authenticate('jwt', {session: false}), controller.update)
 
 module.exports = router
