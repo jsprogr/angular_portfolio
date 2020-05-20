@@ -1,3 +1,5 @@
+import { MaterialInstance } from './classes/material.service';
+
 export interface  IUser {
   email: string
   password: string
@@ -36,4 +38,14 @@ export interface OrderPosition {
   quantity: number
   cost: number
   _id?: string
+}
+
+export interface Filter {
+  start?: Date
+  end?: Date
+  order?: number
+}
+
+export interface MaterialDatepicker extends MaterialInstance {
+  date?: Date
 }
