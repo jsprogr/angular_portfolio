@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnalyticsService } from '../shared/services/analytcs.service';
 
 @Component({
   selector: 'app-analytics-page',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnalyticsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: AnalyticsService) { }
 
   ngOnInit() {
+
   }
 
 }
