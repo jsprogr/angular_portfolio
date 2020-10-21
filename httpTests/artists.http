@@ -1,0 +1,42 @@
+@hostname = http://localhost
+@port = 8000
+@host = {{hostname}}:{{port}}
+#################################################
+@token = token
+@cookies = Coo
+@item_id = {{item.response.body.id}}
+#################################################
+
+### get all items
+GET {{host}}/api/artists http/1.1
+
+
+### get all filtered items
+GET {{host}}/api/artists?q=vit http/1.1
+  
+
+### create new item
+
+# @name item
+POST {{host}}/api/artists/ http/1.1
+Content-Type: application/json
+
+# requests body
+{
+  // items name field
+  "name": "Vityok"
+}
+
+### get item by id
+GET {{host}}/api/artists/{{item_id}} http/1.1
+
+### update item by id
+PATCH  {{host}}/api/artists/{{item_id}} http/1.1
+Content-Type: application/json
+
+{
+  "name": "Viktor"
+}
+
+### remove item
+DELETE  {{host}}/api/artists/{{item_id}} http/1.1

@@ -1,0 +1,4 @@
+@host =http://localhost:8000
+
+###
+GET {{host}}/api/tracks/1 http/1.1
