@@ -36,6 +36,10 @@ export class LoginPageComponent implements OnInit, OnDestroy {
     })
   }
 
+  test() {
+    this.auth.test().subscribe((testData) => console.log('testData', testData))
+  }
+
   onSubmit(){
     this.form.disable()
 

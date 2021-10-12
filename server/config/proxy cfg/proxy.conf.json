@@ -1,0 +1,15 @@
+{
+  "/rest/files/*": {
+    "target": "http://pdev.cloud.ru/jsprogr",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/rest/*": {
+    "target": "http://localhost:8003",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
+

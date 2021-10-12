@@ -26,7 +26,7 @@
 
 
 
-<div *ngIf="!reloading; else reloadingBlock">
+<div *ngIf="!preloading; else reloadingBlock">
   <div *ngIf="orders.length !== 0; else empty">
     <div
       *ngIf="!noMoreOrders"

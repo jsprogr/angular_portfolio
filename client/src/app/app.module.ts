@@ -44,7 +44,7 @@ import { HistoryFilterComponent } from './history-page/history-filter/history-fi
     HistoryFilterComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: "serverApp" }),
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

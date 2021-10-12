@@ -11,10 +11,11 @@ const positionRoutes = require('./routes/position')
 const analyticsRoutes = require('./routes/analytics')
 
 const keys = require('./config/keys')
+const environment = require('./config/environment')
 
 const app = express()
 
-mongoose.connect(keys.mongoURI,   {
+mongoose.connect(environment.mongodb.uri,   {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

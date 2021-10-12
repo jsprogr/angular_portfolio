@@ -1,12 +1,15 @@
 {
-  "/api/*": {
-    "target": "http://localhost:5007",
+  "/api": {
+    "target": "http:/express:3000/",
     "secure": false,
     "logLevel": "debug",
-    "changeOrigin": true
+    "changeOrigin": true,
+    "headers": {
+      "Connection": "keep-alive"
+    }
   },
-  "/uploads/*": {
-    "target": "http://localhost:5007",
+  "/uploads": {
+    "target": "http:/express:3000/",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true

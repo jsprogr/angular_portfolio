@@ -4,22 +4,26 @@
   "description": "app for analytics",
   "main": "index.js",
   "engines": {
-    "node": "10.16.3",
-    "npm": "6.14.3"
+    "node": "14.17.4",
+    "npm": "7.24.1"
   },
   "scripts": {
     "start": "node index",
-    "server": "nodemon index",
+    "dev-server": "nodemon index",
     "client-i": "npm install --prefix client",
     "client": "npm run start --prefix client",
-    "dev": "concurrently  \"npm run server\" \"npm run client\"",
+    "start:dev": "concurrently  \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build --prefix client"
   },
   "keywords": [
-    "ads",
-    "social",
-    "network",
-    "marketing"
+    "mean",
+    "mongo",
+    "express",
+    "angular",
+    "nodejs",
+    "starter",
+    "docker",
+    "ssr"
   ],
   "author": "Viktor M <advert31337@yandex.ru>",
   "license": "ISC",
@@ -27,17 +31,29 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.25.3",
+    "lodash": "^4.17.20",
     "mongoose": "^5.9.11",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
     "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0"
+    "passport-jwt": "^4.0.0",
+    "q": "^1.4.1",
+    "request": "^2.88.2",
+    "rootpath": "^0.1.2"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.3"
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.1.2"
   }
 }

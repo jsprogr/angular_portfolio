@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import {IUser} from '../interfaces';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators'
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +17,11 @@ export class AuthService {
   }
 
   register(user: IUser): Observable<IUser> {
-    return this.http.post<IUser>('api/auth/register', user)
+    return this.http.post<IUser>(environment.apiEndpoint + '/auth/register', user)
   }
 
   login(user: IUser): Observable<{token: string}> {
-    return this.http.post<{token: string}>('api/auth/login', user)
+    return this.http.post<{token: string}>(environment.apiEndpoint + '/auth/login', user)
       .pipe(
         tap(
           ({token}) => {
@@ -29,6 +30,12 @@ export class AuthService {
           }
         )
       )
+  }
+
+  public test(): Observable<any> {
+    console.log('isTest');
+
+    return this.http.get(environment.apiEndpoint + '/auth/test')
   }
 
   logout() {
